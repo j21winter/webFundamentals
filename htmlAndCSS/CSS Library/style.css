@@ -1,0 +1,104 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  /* Fixed width container class that will "auto-center" itself */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.rounded-button{
+    padding: 1px 40px;
+    border: 1px solid;
+    /* outline:;  if you want a double border */
+    border-color: lightseagreen;
+    border-radius: 20px;
+    background-color: #eaeaea;
+    font-size: 12px;
+    color: lightseagreen;
+    text-align: center;
+    font-weight: 600;
+}
+/* Colums & rows (see Flex-ibleColumns*/
+.row{
+    display: flex;
+}
+.col{
+    flex: 1;
+    background-color: teal;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.col-2{
+    flex: 2;
+    background-color: teal;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.col-3{
+    flex: 3;
+    background-color: teal;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+/* Navigation Bar */
+.nav-container{
+    background-color: black;
+}
+.nav-bar{
+    width: 950px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin: 0 auto;
+    row-gap: 10px;
+}
+.nav-left{
+    flex: 2;
+}
+.nav-right{
+    flex: 1;
+}
+/* Navigation bar left */
+.nav-left{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px 20px;
+    color: white;
+}
+h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+.bold{
+    font-weight: 700;   
+}
+/* navigation bar right */
+.nav-right{
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.sign-out{
+    background-color: rgb(72,160,181);
+    color: white;
+    padding: 5px 20px;
+    margin: 0px;
+    border: none;
+    font-size: 16px;
+}

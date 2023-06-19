@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav class="nav-container">
+        <!-- title -->
+        <div class="nav-title-column">
+            <h1 class="nav-title">Dojonary</h1>
+        </div>
+        <!-- search bar -->
+        <div class="nav-search-bar-column">
+            <form action="#" class="search-bar"><input type="text" placeholder="Search"></form>
+        </div>
+        <!-- login/logout -->
+        <div class="login-button-column">
+            <button class="login-button" onclick="loginLogoff(this)">Login</button>
+        </div>
+    </nav> <!-- nav close -->
+    <!-- main content -->
+    <div class="main-content-container">
+        <!-- main content columns -->
+            <!-- left column -->
+        <div class="main-content-left">
+            <div class="left-column-box">
+                <div class="box-column-1">
+                    <h2>Ninja</h2>
+                    <p class="noun">noun</p>
+                    <p class="plural">Plural: <span>ninjas</span></p>
+                    <button class="like-button" onclick="alert('Ninja was liked')">13 likes</button>
+                </div>
+                <div class="box-column-2">
+                    <p>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a>.</p>
+                </div>
+            </div>
+            <div class="left-column-box">
+                <div class="box-column-1">
+                    <h2>Ninja</h2>
+                    <p class="noun">noun</p>
+                    <p class="plural">Plural: <span>ninjas</span></p>
+                    <button class="like-button" onclick="alert('Ninja was liked')">37 likes</button>
+                </div>
+                <div class="box-column-2">
+                    <p>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
+                </div>
+            </div>
+        </div>
+            <!-- right column -->
+        <div class="main-content-right">
+            <div class="right-column-box">
+                <p>Dojonary is <br>defined by <span>YOU</span></p>
+                <button class="add-definition-button" onclick="remove(this)">Add Definition</button>
+            </div>
+        </div>
+    </div>  
+    <!-- script link -->
+    <script src="script.js"></script>
+</body>
+</html>

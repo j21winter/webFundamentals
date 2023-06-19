@@ -1,0 +1,252 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* Navigation Bar */
+.nav-container{
+    background-color: black;
+}
+.nav-bar{
+    width: 950px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin: 0 auto;
+    row-gap: 10px;
+}
+.nav-left{
+    flex: 2;
+}
+.nav-right{
+    flex: 1;
+}
+/* Navigation bar left */
+.nav-left{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px 20px;
+    color: white;
+}
+h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+.bold{
+    font-weight: 700;   
+}
+/* navigation bar right */
+.nav-right{
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.sign-out{
+    background-color: rgb(72,160,181);
+    color: white;
+    padding: 5px 20px;
+    margin: 0px;
+    border: none;
+    font-size: 16px;
+}
+/* Main Content structure */
+.main-content{
+    width: 950px;
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 20px;
+    column-gap: 10px;
+    margin: 0 auto;
+    /* row-gap: 10px; */
+}
+.mainContent-left{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    row-gap: 10px;
+}
+.mainContent-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    row-gap: 10px;
+}
+.box-header{
+    background-color: rgb(57, 56, 56);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+/* main content left column */
+        /* Profile */
+.profile{
+    position: relative;
+    width: 100%;
+}
+                /* Profile Header */
+.profile-header{
+    height: 100px; 
+    background-color: rgb(72,160,181);
+}
+                /* Profile Body */
+.profile-body{
+    padding: 70px 30px 30px 30px;
+    row-gap: 20px;
+    border: 2px solid grey;
+    border-top: none;
+} 
+.user-profile-pic img{
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 2px solid rgb(57, 56, 56);
+}
+.location, .edit-profile, .paragraph{
+    font-size: 20px;
+    margin: 10px;
+}
+.location, .edit-profile{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+.location-icon, .edit-profile-icon{
+    height: inherit;
+    margin: 0;
+}
+.location p, .edit-profile a{
+    margin: 0;
+}
+        /* Education */
+                /* education header */
+.education{
+    width: 100%;
+}
+.education .box-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+/* education body */
+.educationBody{
+    padding: 20px;
+    border: 2px solid grey;
+    border-top: none;
+}
+.experienceContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.experienceTitle{
+    font-size: 20px;
+    color: black;
+}
+.experienceDate{
+    font-size: 10px;
+    color: grey;
+}
+.experienceDescription{
+    font-size: 15px;
+    color: dimgray;
+}
+
+/* Main Content Right Column */
+        /* connection Request */
+                /* Connection Request Header */
+.connection-request .box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.connection-request-icon{
+    display: flex;
+    background-color: grey;
+    border-radius: 50%;
+    border: 2px solid black;
+    height: 30px;
+    width: 30px;
+    justify-content: center;    
+    align-items: center;
+}
+                /* connection request body */
+.connection-request-body{
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid grey;
+    border-top: none;
+}
+.request{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+.request-user{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 20px;
+}
+.other-user-icon{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 2px solid rgb(57, 56, 56);
+}
+.request-button{
+    width: 20px;
+    border-radius: 50%;
+    border: none;
+}
+        /* Your Connections */
+                /* your connection header */
+.your-connections .box-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.your-connections-icon{
+    background-color: dimgray;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 4px;
+}
+                /* your connections body */
+.connection-body{
+    font-size: 20px;
+    border: 2px solid grey;
+    border-top: none;
+    padding: 10px 20px;
+}
+.connection-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 15px;
+    margin-bottom: 20px;
+}
+.view-more{
+    font-size: 15px;
+    border: 2px solid grey;
+    border-top: none;
+    padding: 10px 20px;
+}

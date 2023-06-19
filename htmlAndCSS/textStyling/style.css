@@ -1,0 +1,24 @@
+* {
+    font-family: sans-serif;
+}
+h1{
+    background-color: black;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+}
+span{
+    color: lightskyblue;
+}
+h2{
+    background-color: rebeccapurple;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+}
+h3{
+    background-color: turquoise;
+    text-align: right;
+    text-decoration: underline;
+}

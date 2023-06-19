@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Connections</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation/Header -->
+    <nav class="nav-container">
+        <div class="nav-bar">
+
+    <!-- left column -->
+            <div class="nav-left">
+                <h1>Profile</h1>
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="bold nav-link">My Profile</a>
+                <a href="#" class="nav-link">Find Connections</a>
+            </div>
+
+    <!-- right column -->
+            <div class="nav-right">
+                <button class="sign-out">Sign Out</button>
+            </div>
+        </div> <!-- nav container close -->
+    </nav> <!-- nav close -->
+
+<!-- Main Content area -->
+    <div class="main-content">
+
+<!-- Left Column -->
+        <div class="mainContent-left">
+
+<!-- profile -->
+            <div class="profile">
+
+<!-- header -->
+                <div class="user-profile-pic">
+                    <img src="./media/images/jane-m.jpg" alt="User Profile Picture"> <!-- image positioned absolute inside of profile div -->
+                </div>
+
+<!-- profile Picture -->
+                <div class="profile-header"> <!-- header is empty and only holds a color and height -->
+                </div>
+
+<!-- body -->
+                <div class="profile-body">
+                    <div class="user-name">
+                        <h1>Jane Doe</h1>
+                    </div>
+
+                    <div class="location">
+                        <img src="./media/icons/map-marker.png" alt="Location Icon" class="location-icon">
+                        <p>Seattle</p>
+                    </div>
+
+                    <div class="paragraph">
+                        <p>Developer | Engineer | Problem Solver</p>
+                        <p>Master of shadows and the Internet</p>
+                    </div>
+
+                    <div class="edit-profile">
+                        <img src="./media/icons/gear.png" alt="Edit Profile Icon" class="edit-profile-icon">
+                        <a href="#" onclick="editProfile()">Edit Profile</a>
+                    </div> 
+
+                    <form action="#" class="edit-profile-form hidden">
+                        <h4>Edit Profile</h4>
+                        <input type="text" name="edit name" id="edit-name" placeholder="name" >
+                        <input type="text" name="edit location" id="edit-location" placeholder="location">
+                        <button class="submit" onclick="submitProfileChanges()">Submit</button>
+                    </form>
+
+                </div> <!-- profile body close -->
+            </div> <!-- profile close -->
+
+<!-- Education -->
+            <div class="education">
+    <!-- header -->
+                <div class="box-header">
+                    <h3>Education</h3>
+                </div>
+
+    <!-- body -->
+                <div class="educationBody">
+
+                    <div class="experienceContainer">
+                        <h4 class="experienceTitle">Coding Dojo - Full Stack Bootcamp</h4>
+                        <p class="experienceDate">Dec 2019 - Mar 2020</p>
+                        <p class="experienceDescription">Triple black belt in Python, Mern, and C#...</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+<!-- Right Column -->
+        <div class="mainContent-right">
+
+<!-- connection request -->
+            <div class="connection-request">
+
+<!-- header -->
+                <div class="box-header" id="connection-request-header">
+                    <p class="connection-request-icon">2</p> 
+                    <h3>Connection Requests</h3>
+                </div> <!-- box header close -->
+
+<!-- body -->
+                <div class="connection-request-body">
+
+                    <div class="request" id="user-request-todd-e">
+
+                        <div class="request-user">
+                            <img src="./media/images/todd-s.jpg" alt="Todd E Profile Picture" class="other-user-icon">
+                            <p class="other-user-name">Todd E</p>
+                        </div>
+
+                        <div class="approval-buttons">
+                            <button class="request-button approve-request" onclick="removeRequest('#user-request-todd-e'), requestCountReduce(), approveRequest(), newConnection('#user-request-todd-e') "><img src="./media/icons/accept-circle.png" alt="Accept request button" class="request-button"></button>
+                            <button class="request-button deny-request" onclick="removeRequest('#user-request-todd-e'), requestCountReduce()"><img src="./media/icons/close-circle.png" alt="Deny request button" class="request-button"></button>
+                        </div>
+
+                    </div>  <!-- request close -->
+
+                    <div class="request" id="user-request-phil-k">
+
+                        <div class="request-user" >
+                            <img src="./media/images/phil-s.jpg" alt="Phil S Profile Picture" class="other-user-icon">
+                            <p>Phil K</p>
+                        </div> 
+
+                        <div class="approval-buttons">
+                            <button class="request-button approve-request" onclick="removeRequest('#user-request-phil-k'), requestCountReduce(), approveRequest(), newConnection('#user-request-phil-k')"><img src="./media/icons/accept-circle.png" alt="Accept request button" class="request-button"></button>
+                            <button class="request-button deny-request" onclick="removeRequest('#user-request-phil-k'), requestCountReduce()"><img src="./media/icons/close-circle.png" alt="Deny request button" class="request-button"></button>
+                        </div>
+
+                    </div>  <!-- request close -->
+                </div> <!-- connection request body close -->
+            </div> <!-- connection request close -->
+
+<!-- your connections -->
+            <div class="your-connections">
+
+<!-- header -->
+                <div class="box-header">
+                    <p class="your-connections-icon">300</p>
+                    <h3>Your Connections</h3>
+                </div> <!-- your connection box header close -->
+<!-- body -->
+                <div class="connection-body">
+
+                    <div class="connection-row">
+                        <img src="./media/images/adrien-s.jpg" alt="Adrian D" class="other-user-icon">
+                        <p class="other-user-name">Adrien S</p>
+                    </div>
+
+                    <div class="connection-row">
+                        <img src="./media/images/anne-s.jpg" alt="Anne J Profile Picture" class="other-user-icon">
+                        <p class="other-user-name">Anne J</p>
+                    </div>
+
+                    <div class="connection-row">
+                        <img src="./media/images/alayne-s.jpg" alt="Alayne T Profile Picture" class="other-user-icon">
+                        <p class="other-user-name">Alayne T</p>
+                    </div>
+
+                    <div class="connection-row">
+                        <img src="./media/images/arry-s.jpg" alt="Arry Y Profile Picture" class="other-user-icon">
+                        <p class="other-user-name">Arry Y</p>
+                    </div>
+
+                </div> <!-- your connections body close -->
+
+                <div class="view-more">
+                    <a href="#">View More</a>
+                </div>
+
+            </div> <!-- your connections close  -->
+        </div> <!-- main content Right close -->
+    </div> <!-- main content close -->
+    <script src="script.js"></script>
+</body>
+</html>
