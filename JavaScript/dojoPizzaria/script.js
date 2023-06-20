@@ -13,7 +13,7 @@ console.log(testPizza1)
 var testPizza2 = pizzaOven('hand tossed', 'marinara', ['mozzarella', 'feta'], ['mushrooms', 'olives', 'onions'])
 console.log(testPizza2)
 
-var testPizza3 = pizzaOven('thin', 'BBQ', 'cheeddar', ['spinach', 'bacon'])
+var testPizza3 = pizzaOven('thin', 'BBQ', 'cheddar', ['spinach', 'bacon'])
 console.log(testPizza3)
 
 var testPizza4 = pizzaOven('flatbread', 'ranch', 'american','egg')
