@@ -53,7 +53,6 @@ $('.symbol').click(function (){
     function calculate(symbol){
         if(symbol == '÷'){
             divide(sum, inputNum)
-            
         }
         else if(symbol == '×'){
             multiply(sum, inputNum)
@@ -92,11 +91,8 @@ $('.symbol').click(function (){
 
 // equals // 
 $('.equals').click(function (){
-    console.log(prevSymbol)
     inputNum = parseInt(display.innerText)
-    console.log(`sum is ${sum}. inputNum is ${inputNum}`)
     let result = calculate(prevSymbol)
-    console.log(`sum is ${sum}. inputNum is ${inputNum} result is ${result}`)
     display.innerText = result
     inputNum = 0
 })
