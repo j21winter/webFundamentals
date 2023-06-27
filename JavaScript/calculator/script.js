@@ -2,7 +2,8 @@ let display = document.querySelector(".display");
 let sum;
 let inputNum;
 let prevSymbol;
-
+let equals = 0
+let displayResult;
 
 
 // rules & tying //
@@ -11,7 +12,14 @@ $('.num').click(function type(){
         display.innerText = (this).innerText
         return
     }
-    display.innerText = display.innerText + (this).innerText;
+    else if(display.innerText == displayResult){
+        varReset()
+        display.innerText = (this).innerText
+        return
+    }
+    else{
+        display.innerText = display.innerText + (this).innerText;
+    }
 })
 
 $('.decimal').click(function type(){
@@ -29,70 +37,67 @@ $('.zero').click(function() {
 
 // clear //
 $('.clear').click(function() {
-    console.log('clicked = ' + (this).innerText)
-    display.innerText = 0;
-    sum = undefined;
+    varReset()
+    display.innerText = 0
 })
 
+// functionality //
+function calculate(){
+    if(inputNum == undefined){
+        return sum
+    }
+    else if(prevSymbol == '÷'){
+        sum = sum / inputNum
+        return sum
+    }
+    else if(prevSymbol == '×'){
+        sum = sum * inputNum
+        return sum
+    }
+    else if(prevSymbol == '-'){
+        sum = sum - inputNum
+        return sum
+    }
+    else if(prevSymbol == '+'){
+        sum = sum + inputNum
+        return sum
+    }
+}
 
-// symbols //
 $('.symbol').click(function (){
-    let symbol = (this).innerText
-    prevSymbol = symbol
-    if(sum == undefined){
+    prevSymbol = (this).innerText
+    if(equals > 0){
+        display.innerText = 0
+        equals = 0
+        return
+    }
+    else if(sum == undefined){
         sum = parseInt(display.innerText)
         display.innerText = 0
         return
-    } else {
+    } else if(inputNum == undefined){
         inputNum = parseInt(display.innerText)
-        }
-    display.innerText = 0
-    calculate(symbol)
-    })
-
-    function calculate(symbol){
-        if(symbol == '÷'){
-            divide(sum, inputNum)
-        }
-        else if(symbol == '×'){
-            multiply(sum, inputNum)
-        }
-        else if(symbol == '-'){
-            subtract(sum, inputNum)
-        }
-        else{
-            sum = add(sum, inputNum)
-        }
-        return sum
+        let result = calculate()
+        sum = result
+        inputNum = undefined
+        display.innerText = 0
     }
-
-
-
-    function divide(total, newNum){
-        total = total / newNum
-        return total
-    }
-    
-    function multiply(total, newNum){
-        total = total * newNum
-        return total
-    }
-    
-    function add(total, newNum){
-        total = total + newNum
-        return total
-    }
-    
-    function subtract(total, newNum){
-        total = total - newNum
-        return total
-
-    }
-
-// equals // 
-$('.equals').click(function (){
-    inputNum = parseInt(display.innerText)
-    let result = calculate(prevSymbol)
-    display.innerText = result
-    inputNum = 0
 })
+
+$('.equals').click(function(){
+    if(inputNum == undefined){
+        inputNum = parseInt(display.innerText)
+    }
+    displayResult = calculate()
+    display.innerText = displayResult
+    equals ++
+    inputNum = undefined
+})
+
+function varReset(){
+    sum = undefined
+    inputNum = undefined
+    prevSymbol = undefined
+    equals = 0
+    displayResult = undefined
+}
