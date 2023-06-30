@@ -2,12 +2,13 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: box-border;
-    /* margin: 0 auto; */
+    box-sizing: border-box;
 }
+
 body{
     text-align: center;
 }
+
 .container{
     display: inline-block;
 }
@@ -19,17 +20,6 @@ body{
     border-radius: 50%;
     position: relative;
 }
-
-/* .center{
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border: none;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-} */
 
 .seconds{
     width: 190px;
@@ -65,17 +55,13 @@ body{
 }
 
 .center{
-    /* height: 90px;
-    width: 90px; */
     display: inline-block;
     background-color: black;
     color: white;
     border-radius: 20px;
-    overflow: none;
     position: absolute;
     top: 45%;
     left: 40%;
     padding: 5px;
     text-align: center;
-    
 }
