@@ -64,16 +64,17 @@
 
 .empty{
     display: inline-block;
-    background-color: none;
     width: 20px;
     height: 20px;
 }
 
-#world{
-    /* margin: 0 auto; */
+#pac-man{
+    height: 20px;
+    width: 20px;
+    position: absolute;
 }
 
-#pac-man{
+#red-ghost{
     height: 20px;
     width: 20px;
     position: absolute;
